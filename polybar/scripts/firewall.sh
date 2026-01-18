@@ -15,7 +15,7 @@ toggle_state() {
 	echo "off" > "$STATE_FILE"
     else
         sudo iptables-restore < /home/pingu/.config/iptables/ruleset.txt &
-	      sudo ip6tables-restore < home/pingu/.config/iptables/ruleset6.txt &
+	    sudo ip6tables-restore < home/pingu/.config/iptables/ruleset6.txt &
         echo "on" > "$STATE_FILE"
     fi
 }
